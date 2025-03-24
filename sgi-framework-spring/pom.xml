@@ -5,14 +5,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.crue.hercules.sgi</groupId>
+    <groupId>io.github.didiez</groupId>
     <artifactId>sgi-starter-parent</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.crue.hercules.sgi</groupId>
+  <groupId>io.github.didiez</groupId>
   <artifactId>sgi-framework-spring</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>sgi-framework-spring</name>
   <description>SGI Framework</description>
@@ -35,13 +35,26 @@
   </developers>
 
   <scm>
-    <url>https://github.com/HerculesCRUE/SGI</url>
+    <url>https://github.com/didiez/hercules-sgi-monorepo-ci-poc</url>
   </scm>
 
   <properties>
     <!-- Manifest data for the Apache Maven JAR Plugin -->
     <manifest.name>org/crue/hercules/sgi/framework</manifest.name>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>snapshots-repo</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 
   <dependencies>
     <!--
@@ -277,6 +290,16 @@
       <plugin>
         <groupId>org.sonarsource.scanner.maven</groupId>
         <artifactId>sonar-maven-plugin</artifactId>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.7.0</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+        </configuration>
       </plugin>
     </plugins>
   </build>

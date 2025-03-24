@@ -1,3 +1,5 @@
+name: sgi-auth:build
+
 on:
   push:
     branches: [ main ]

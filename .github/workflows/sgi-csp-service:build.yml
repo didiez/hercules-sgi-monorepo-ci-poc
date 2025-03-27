@@ -40,7 +40,6 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          context: ./sgi-csp-service
           images: didiez/sgi-csp-service
 
       - name: Login to DockerHub

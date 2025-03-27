@@ -19,6 +19,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
@@ -31,16 +45,17 @@ jobs:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-      - name: Run SonarCloud Analysis
+      - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          mvn verify sonar:sonar -Dsonar.token=$SONAR_TOKEN -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=didiez -Dsonar.projectKey=didiez_sgi-csp-service
+          mvn -B clean verify sonar:sonar -DskipTests -Dmaven.javadoc.skip=true -Dsonar.token=$SONAR_TOKEN -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=didiez -Dsonar.projectKey=didiez_sgi-csp-service
 
-      - name: Build project
+      - name: Extract JAR for Docker layer caching
         run: |
-          mvn clean package -DskipTests -Dmaven.javadoc.skip=true
-          mkdir -p target/dependency && (cd target/dependency; jar -xf ../*-exec.jar)
+          mkdir -p target/dependency
+          cd target/dependency
+          jar -xf ../*-exec.jar
 
       - name: Docker meta
         id: meta
@@ -65,7 +80,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push
+      - name: Build and push docker image
         uses: docker/build-push-action@v6
         with:
           context: ./sgi-csp-service

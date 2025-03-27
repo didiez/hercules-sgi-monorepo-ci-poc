@@ -11,6 +11,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: sgi-csp-service
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,7 +32,6 @@ jobs:
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Build project
-        working-directory: sgi-csp-service
         run: |
           mvn clean package -DskipTests -Dmaven.javadoc.skip=true
           mkdir -p target/dependency && (cd target/dependency; jar -xf ../*-exec.jar)
@@ -37,7 +40,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: name/app
+          images: didiez/sgi-csp-service
 
       - name: Login to DockerHub
         if: github.event_name != 'pull_request'

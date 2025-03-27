@@ -34,7 +34,6 @@ jobs:
       - name: Build project
         run: |
           mvn clean package -DskipTests -Dmaven.javadoc.skip=true
-          mkdir -p target/dependency && (cd target/dependency; jar -xf ../*-exec.jar)
 
       - name: Docker meta
         id: meta

@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.github.didiez.auth</groupId>
+    <groupId>io.github.didiez.hercules-sgi.auth</groupId>
     <artifactId>sgi-auth</artifactId>
     <version>0.4.1-SNAPSHOT</version>
   </parent>
@@ -15,7 +15,7 @@
 
   <name>broker-saml-mappers</name>
   <description>SGI Broker SAML Mappers</description>
-  <url>https://github.com/HerculesCRUE/SGI</url>
+  <url>https://github.com/didiez/hercules-sgi-monorepo-ci-poc</url>
 
   <licenses>
     <license>

@@ -10,13 +10,13 @@
     <version>2.3.9.RELEASE</version>
   </parent>
 
-  <groupId>io.github.didiez</groupId>
+  <groupId>io.github.didiez.hercules-sgi</groupId>
   <artifactId>sgi-starter-parent</artifactId>
   <version>0.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>sgi-starter-parent</name>
   <description>Parent pom providing dependency and plugin management for applications built with Maven</description>
-  <url>https://github.com/HerculesCRUE/SGI</url>
+  <url>https://github.com/didiez/hercules-sgi-monorepo-ci-poc</url>
 
   <licenses>
     <license>
@@ -70,6 +70,19 @@
     maven-surefire-plugin -->
     <argLine>-Duser.timezone=UTC</argLine>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>snapshots-repo</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 
   <dependencyManagement>
     <dependencies>

@@ -5,18 +5,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.github.didiez</groupId>
+    <groupId>io.github.didiez.hercules-sgi</groupId>
     <artifactId>sgi-starter-parent</artifactId>
     <version>0.1.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>io.github.didiez</groupId>
+  <groupId>io.github.didiez.hercules-sgi</groupId>
   <artifactId>sgi-csp-service</artifactId>
   <version>0.9.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>sgi-csp-service</name>
   <description>Servicio Convocatorias Solicitudes y Proyectos SGI HERCULES</description>
-  <url>https://github.com/HerculesCRUE/SGI</url>
+  <url>https://github.com/didiez/hercules-sgi-monorepo-ci-poc</url>
 
   <licenses>
     <license>
@@ -44,19 +44,6 @@
     <!-- Versions -->
     <sgi-framework-spring.version>0.1.1-SNAPSHOT</sgi-framework-spring.version>
   </properties>
-
-  <repositories>
-    <repository>
-      <id>snapshots-repo</id>
-      <url>https://central.sonatype.com/repository/maven-snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
 
   <profiles>
     <profile>
@@ -89,10 +76,10 @@
     <dependencies>
       <!--
         Hercules Framework - Support classes for Hercules services.
-        https://github.com/HerculesCRUE/SGI/
+        https://github.com/didiez/hercules-sgi-monorepo-ci-poc/
       -->
       <dependency>
-        <groupId>io.github.didiez</groupId>
+        <groupId>io.github.didiez.hercules-sgi</groupId>
         <artifactId>sgi-framework-spring</artifactId>
         <version>${sgi-framework-spring.version}</version>
       </dependency>
@@ -217,10 +204,10 @@
     </dependency>
     <!--
       Hercules Framework - Support classes for Hercules services.
-      https://github.com/HerculesCRUE/SGI/
+      https://github.com/didiez/hercules-sgi-monorepo-ci-poc/
     -->
     <dependency>
-      <groupId>io.github.didiez</groupId>
+      <groupId>io.github.didiez.hercules-sgi</groupId>
       <artifactId>sgi-framework-spring</artifactId>
     </dependency>
     <!-- 
@@ -384,6 +371,11 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+            <layers>
+                <enabled>true</enabled>
+            </layers>
+        </configuration>
       </plugin>
       <!--
           SonarScanner for Maven - Executes the SonarQube analysis via a regular Maven goal.
@@ -392,16 +384,6 @@
       <plugin>
         <groupId>org.sonarsource.scanner.maven</groupId>
         <artifactId>sonar-maven-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <groupId>org.sonatype.central</groupId>
-        <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.7.0</version>
-        <extensions>true</extensions>
-        <configuration>
-          <publishingServerId>central</publishingServerId>
-        </configuration>
       </plugin>
     </plugins>
   </build>

@@ -5,18 +5,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.github.didiez</groupId>
+    <groupId>io.github.didiez.hercules-sgi</groupId>
     <artifactId>sgi-starter-parent</artifactId>
     <version>0.1.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>io.github.didiez</groupId>
+  <groupId>io.github.didiez.hercules-sgi</groupId>
   <artifactId>sgi-framework-spring</artifactId>
   <version>0.1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>sgi-framework-spring</name>
   <description>SGI Framework</description>
-  <url>https://github.com/HerculesCRUE/SGI</url>
+  <url>https://github.com/didiez/hercules-sgi-monorepo-ci-poc</url>
 
   <licenses>
     <license>
@@ -42,19 +42,6 @@
     <!-- Manifest data for the Apache Maven JAR Plugin -->
     <manifest.name>org/crue/hercules/sgi/framework</manifest.name>
   </properties>
-
-  <repositories>
-    <repository>
-      <id>snapshots-repo</id>
-      <url>https://central.sonatype.com/repository/maven-snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
 
   <dependencies>
     <!--

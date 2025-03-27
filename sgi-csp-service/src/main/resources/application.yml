@@ -1,5 +1,3 @@
-# dummy change for github actions workflow testing
-
 server:
   port : 4281
   error:

@@ -10,6 +10,6 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/template:build-backend-service.yml
+    secrets: inherit
     with:
       project_name: sgi-eti-service
-    secrets: inherit

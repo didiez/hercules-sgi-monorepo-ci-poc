@@ -5,18 +5,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.crue.hercules.sgi</groupId>
+    <groupId>io.github.didiez.hercules-sgi</groupId>
     <artifactId>sgi-starter-parent</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.crue.hercules.sgi</groupId>
+  <groupId>io.github.didiez.hercules-sgi</groupId>
   <artifactId>sgi-prc-service</artifactId>
   <version>0.3.0</version>
   <packaging>jar</packaging>
   <name>sgi-prc-service</name>
   <description>Configuración SGI HERCULES</description>
-  <url>https://github.com/HerculesCRUE/SGI</url>
+  <url>https://github.com/didiez/hercules-sgi-monorepo-ci-poc</url>
 
   <licenses>
     <license>
@@ -35,14 +35,14 @@
   </developers>
 
   <scm>
-    <url>https://github.com/HerculesCRUE/SGI</url>
+    <url>https://github.com/didiez/hercules-sgi-monorepo-ci-poc</url>
   </scm>
 
   <properties>
     <!-- Manifest data for the Apache Maven JAR Plugin -->
     <manifest.name>org/crue/hercules/sgi/prc</manifest.name>
     <!-- Versions -->
-    <sgi-framework-spring.version>0.1.0</sgi-framework-spring.version>
+    <sgi-framework-spring.version>0.1.1-SNAPSHOT</sgi-framework-spring.version>
   </properties>
 
   <profiles>
@@ -76,10 +76,10 @@
     <dependencies>
       <!--
         Hercules Framework - Support classes for Hercules services.
-        https://github.com/HerculesCRUE/SGI/
+        https://github.com/didiez/hercules-sgi-monorepo-ci-poc/
       -->
       <dependency>
-        <groupId>org.crue.hercules.sgi</groupId>
+        <groupId>io.github.didiez.hercules-sgi</groupId>
         <artifactId>sgi-framework-spring</artifactId>
         <version>${sgi-framework-spring.version}</version>
       </dependency>
@@ -204,10 +204,10 @@
     </dependency>
     <!--
       Hercules Framework - Support classes for Hercules services.
-      https://github.com/HerculesCRUE/SGI/
+      https://github.com/didiez/hercules-sgi-monorepo-ci-poc/
     -->
     <dependency>
-      <groupId>org.crue.hercules.sgi</groupId>
+      <groupId>io.github.didiez.hercules-sgi</groupId>
       <artifactId>sgi-framework-spring</artifactId>
     </dependency>
     <!-- 

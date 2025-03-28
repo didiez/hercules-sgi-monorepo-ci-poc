@@ -4,17 +4,17 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.crue.hercules.sgi</groupId>
+    <groupId>io.github.didiez.hercules-sgi</groupId>
     <artifactId>sgi-starter-parent</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1-SNAPSHOT</version>
   </parent>
-  <groupId>org.crue.hercules.sgi</groupId>
+  <groupId>io.github.didiez.hercules-sgi</groupId>
   <artifactId>sgi-rep-service</artifactId>
   <version>0.5.1</version>
   <packaging>jar</packaging>
   <name>sgi-rep-service</name>
   <description>Informes SGI HERCULES</description>
-  <url>https://github.com/HerculesCRUE/SGI</url>
+  <url>https://github.com/didiez/hercules-sgi-monorepo-ci-poc</url>
   <licenses>
     <license>
       <name>GNU General Public License, Version 3</name>
@@ -30,13 +30,13 @@
     </developer>
   </developers>
   <scm>
-    <url>https://github.com/HerculesCRUE/SGI</url>
+    <url>https://github.com/didiez/hercules-sgi-monorepo-ci-poc</url>
   </scm>
   <properties>
     <!-- Manifest data for the Apache Maven JAR Plugin -->
     <manifest.name>org/crue/hercules/sgi/csp</manifest.name>
     <!-- Versions -->
-    <sgi-framework-spring.version>0.1.0</sgi-framework-spring.version>
+    <sgi-framework-spring.version>0.1.1-SNAPSHOT</sgi-framework-spring.version>
     <com-deepoove-poi-tl.version>1.12.1</com-deepoove-poi-tl.version>
     <com-deepoove-poi-tl-jsonmodel-support.version>1.0.0</com-deepoove-poi-tl-jsonmodel-support.version>
     <io.github.draco1023-poi-tl-ext.version>0.4.8-poi5</io.github.draco1023-poi-tl-ext.version>
@@ -75,10 +75,10 @@
     <dependencies>
       <!--
         Hercules Framework - Support classes for Hercules services.
-        https://github.com/HerculesCRUE/SGI/
+        https://github.com/didiez/hercules-sgi-monorepo-ci-poc/
       -->
       <dependency>
-        <groupId>org.crue.hercules.sgi</groupId>
+        <groupId>io.github.didiez.hercules-sgi</groupId>
         <artifactId>sgi-framework-spring</artifactId>
         <version>${sgi-framework-spring.version}</version>
       </dependency>
@@ -235,10 +235,10 @@
     </dependency>
     <!--
       Hercules Framework - Support classes for Hercules services.
-      https://github.com/HerculesCRUE/SGI/
+      https://github.com/didiez/hercules-sgi-monorepo-ci-poc/
     -->
     <dependency>
-      <groupId>org.crue.hercules.sgi</groupId>
+      <groupId>io.github.didiez.hercules-sgi</groupId>
       <artifactId>sgi-framework-spring</artifactId>
     </dependency>
     <!-- 

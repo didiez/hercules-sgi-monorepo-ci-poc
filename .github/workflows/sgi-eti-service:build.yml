@@ -1,0 +1,15 @@
+name: sgi-eti-service:build
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'sgi-eti-service/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/template:build-backend-service.yml
+    with:
+      project_name: sgi-eti-service
+    secrets: inherit

@@ -198,6 +198,8 @@ public class FuenteFinanciacionController {
     List<FuenteFinanciacionOutput> content = page.getContent().stream()
         .map(this::convert)
         .collect(Collectors.toList());
+    
+    log.debug("dummy log!");
 
     return new PageImpl<>(content, page.getPageable(), page.getTotalElements());
   }

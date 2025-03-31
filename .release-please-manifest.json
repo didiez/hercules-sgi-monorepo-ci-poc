@@ -1,4 +1,5 @@
 {
     "sgi-csp-service": "0.9.0",
-    "sgi-eti-service": "0.6.0" 
+    "sgi-eti-service": "0.6.0",
+    ".": "0.1.0"
 }

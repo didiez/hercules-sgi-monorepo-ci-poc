@@ -171,7 +171,7 @@ public class AgrupacionGastoConceptoController {
 
   private Page<AgrupacionGastoConceptoOutput> convert(Page<AgrupacionGastoConcepto> page) {
     List<AgrupacionGastoConceptoOutput> content = page.getContent().stream()
-        .map(agrupacionGastoConcepto -> convert(agrupacionGastoConcepto)).collect(Collectors.toList());
+        .map(this::convert).collect(Collectors.toList());
 
     return new PageImpl<>(content, page.getPageable(), page.getTotalElements());
   }

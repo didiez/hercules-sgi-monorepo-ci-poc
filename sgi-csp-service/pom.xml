@@ -10,7 +10,7 @@
 
   <groupId>io.github.didiez.hercules-sgi</groupId>
   <artifactId>sgi-csp-service</artifactId>
-  <version>0.11.0</version>
+  <version>0.11.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>sgi-csp-service</name>
   <description>Servicio Convocatorias Solicitudes y Proyectos SGI HERCULES</description>

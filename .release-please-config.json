@@ -5,48 +5,8 @@
     "tag-separator": "@",
     "separate-pull-requests": true,
     "packages": {
-      "sgi-cnf-service": {
-        "path": "sgi-cnf-service",
-        "release-type": "java"
-      },
-      "sgi-com-service": {
-        "path": "sgi-com-service",
-        "release-type": "java"
-      },
       "sgi-csp-service": {
         "path": "sgi-csp-service",
-        "release-type": "java"
-      },
-      "sgi-eer-service": {
-        "path": "sgi-eer-service",
-        "release-type": "java"
-      },
-      "sgi-eti-service": {
-        "path": "sgi-eti-service",
-        "release-type": "java"
-      },
-      "sgi-pii-service": {
-        "path": "sgi-pii-service",
-        "release-type": "java"
-      },
-      "sgi-prc-service": {
-        "path": "sgi-prc-service",
-        "release-type": "java"
-      },
-      "sgi-rel-service": {
-        "path": "sgi-rel-service",
-        "release-type": "java"
-      },
-      "sgi-rep-service": {
-        "path": "sgi-rep-service",
-        "release-type": "java"
-      },
-      "sgi-tp-service": {
-        "path": "sgi-tp-service",
-        "release-type": "java"
-      },
-      "sgi-usr-service": {
-        "path": "sgi-usr-service",
         "release-type": "java"
       }
     }

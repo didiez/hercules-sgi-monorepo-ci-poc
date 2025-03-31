@@ -19,3 +19,4 @@ jobs:
         uses: googleapis/release-please-action@v3.7.6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: simple

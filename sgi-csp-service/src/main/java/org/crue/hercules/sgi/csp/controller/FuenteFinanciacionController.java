@@ -196,7 +196,8 @@ public class FuenteFinanciacionController {
 
   private Page<FuenteFinanciacionOutput> convert(Page<FuenteFinanciacion> page) {
     List<FuenteFinanciacionOutput> content = page.getContent().stream()
-        .map(this::convert).collect(Collectors.toList());
+        .map(this::convert)
+        .collect(Collectors.toList());
 
     return new PageImpl<>(content, page.getPageable(), page.getTotalElements());
   }

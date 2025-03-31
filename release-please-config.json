@@ -5,12 +5,12 @@
   "separate-pull-requests": false,
   "packages": {
     "sgi-csp-service": {
-      "component": "sgi-csp-service"
+      "component": "sgi-csp-service",
       "release-type": "maven",
       "separate-pull-requests": true
     },
     "sgi-eti-service": {
-      "component": "sgi-eti-service"
+      "component": "sgi-eti-service",
       "release-type": "maven",
       "separate-pull-requests": true
     }

@@ -1,11 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "include-component-in-tag": true,
+  "include-v-in-tag": true,
+  "tag-separator": "@",
+  "pull-request-title-pattern": "chore(${component}): release ${version}",
+  "separate-pull-requests": false,
   "packages": {
     "sgi-csp-service": {
-      "release-type": "maven"
+      "path": "sgi-csp-service",
+      "release-type": "maven",
+      "separate-pull-requests": true
     },
     "sgi-eti-service": {
-      "release-type": "maven"
+      "path": "sgi-eti-service",
+      "release-type": "maven",
+      "separate-pull-requests": true
     }
   }
 }

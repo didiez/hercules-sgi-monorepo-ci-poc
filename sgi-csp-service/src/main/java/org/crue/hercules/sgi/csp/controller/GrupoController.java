@@ -152,6 +152,7 @@ public class GrupoController {
   @PreAuthorize("hasAuthorityForAnyUO('CSP-GIN-C')")
   public ResponseEntity<GrupoOutput> create(@Valid @RequestBody GrupoInput grupo) {
     log.debug("create(GrupoInput grupo) - start");
+    log.debug("hi there! testing dummy feature release-please");
     GrupoOutput returnValue = converter.convert(service.create(converter.convert(grupo)));
     log.debug("create(GrupoInput grupo) - end");
     return new ResponseEntity<>(returnValue, HttpStatus.CREATED);

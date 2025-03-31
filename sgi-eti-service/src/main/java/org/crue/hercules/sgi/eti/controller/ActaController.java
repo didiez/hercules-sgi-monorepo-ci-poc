@@ -56,6 +56,7 @@ public class ActaController {
    */
   public ActaController(ActaService service, ComentarioService comentariosService) {
     log.debug("ActaController(ActaService service, ComentarioService comentariosService) - start");
+    log.debug("dummy log!");
     this.service = service;
     this.comentariosService = comentariosService;
     log.debug("ActaController(ActaService service,ComentarioService comentariosService) - end");

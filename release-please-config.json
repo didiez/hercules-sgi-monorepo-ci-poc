@@ -7,11 +7,11 @@
     "packages": {
       "sgi-csp-service": {
         "path": "sgi-csp-service", 
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-eti-service": {
         "path": "sgi-eti-service",
-        "release-type": "java"
+        "release-type": "maven"
       }
     }
   }

@@ -4,6 +4,7 @@
     "include-v-in-tag": true,
     "tag-separator": "@",
     "separate-pull-requests": true,
+    "monorepo-tags": true,
     "packages": {
       "sgi-csp-service": {
         "path": "sgi-csp-service", 

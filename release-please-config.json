@@ -6,7 +6,7 @@
     "separate-pull-requests": true,
     "packages": {
       "sgi-csp-service": {
-        "path": "sgi-csp-service",
+        "path": "sgi-csp-service", 
         "release-type": "java"
       },
       "sgi-eti-service": {

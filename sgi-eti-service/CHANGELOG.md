@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.10.0](https://github.com/didiez/hercules-sgi-monorepo-ci-poc/compare/sgi-eti-service-v0.9.0...sgi-eti-service-v0.10.0) (2025-03-31)
+
+
+### Features
+
+* **sg-eti-service:** prueba para release-please monorepo ([a515449](https://github.com/didiez/hercules-sgi-monorepo-ci-poc/commit/a515449bb861218d23958ce98b5270a2d883e5bc))
+
+
+### Bug Fixes
+
+* **sgi-eti-service:** añadido log para probar release-please ([#4](https://github.com/didiez/hercules-sgi-monorepo-ci-poc/issues/4)) ([9ca96a5](https://github.com/didiez/hercules-sgi-monorepo-ci-poc/commit/9ca96a53464271398bf11a3072d391befd33b5b1))
+
 ## [0.9.0](https://github.com/didiez/hercules-sgi-monorepo-ci-poc/compare/sgi-eti-service-v0.8.0...sgi-eti-service-v0.9.0) (2025-03-31)
 
 

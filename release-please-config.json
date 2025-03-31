@@ -9,12 +9,12 @@
       "sgi-csp-service": {
         "path": "sgi-csp-service", 
         "release-type": "maven",
-        "separate-pull-requests": true,
+        "separate-pull-requests": true
       },
       "sgi-eti-service": {
         "path": "sgi-eti-service",
         "release-type": "maven",
-        "separate-pull-requests": true,
+        "separate-pull-requests": true
       }
     }
   }

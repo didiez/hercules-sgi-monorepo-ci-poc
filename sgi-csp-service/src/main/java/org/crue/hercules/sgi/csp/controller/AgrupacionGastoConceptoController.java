@@ -61,6 +61,7 @@ public class AgrupacionGastoConceptoController {
   public ResponseEntity<AgrupacionGastoConceptoOutput> create(
       @Valid @RequestBody AgrupacionGastoConceptoInput agrupacionGastoConcepto) {
     log.debug("create(AgrupacionGastoConcepto agrupacionGastoConcepto) - start");
+    log.debug("probando release-please 1")
     AgrupacionGastoConcepto returnValue = service.create(convert(agrupacionGastoConcepto));
     log.debug("create(AgrupacionGastoConcepto agrupacionGastoConcepto) - end");
     return new ResponseEntity<>(convert(returnValue), HttpStatus.CREATED);

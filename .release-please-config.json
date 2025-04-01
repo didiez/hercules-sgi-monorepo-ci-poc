@@ -1,53 +1,49 @@
 {
     "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-    "include-component-in-tag": true,
-    "include-v-in-tag": true,
-    "tag-separator": "@",
-    "separate-pull-requests": true,
     "packages": {
       "sgi-cnf-service": {
         "path": "sgi-cnf-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-com-service": {
         "path": "sgi-com-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-csp-service": {
         "path": "sgi-csp-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-eer-service": {
         "path": "sgi-eer-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-eti-service": {
         "path": "sgi-eti-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-pii-service": {
         "path": "sgi-pii-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-prc-service": {
         "path": "sgi-prc-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-rel-service": {
         "path": "sgi-rel-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-rep-service": {
         "path": "sgi-rep-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-tp-service": {
         "path": "sgi-tp-service",
-        "release-type": "java"
+        "release-type": "maven"
       },
       "sgi-usr-service": {
         "path": "sgi-usr-service",
-        "release-type": "java"
+        "release-type": "maven"
       }
     }
   }
